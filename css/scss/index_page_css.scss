@@ -1,0 +1,91 @@
+html{
+    font-size: 72.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'helvetica';
+}
+
+.top-header{
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    
+    div{
+        h1{
+            font-size: 2.5rem;
+        }
+            img{
+            width: 5rem;
+            height: 100%;
+        }
+    }
+    
+    
+}
+
+.navigation-bar{
+		width: 100%;
+        height: 4.2rem;
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		border-top: 1px solid lightgrey;
+		border-bottom: 1px solid lightgrey;
+		overflow-x: scroll;
+		scrollbar-width: none;
+		scroll-snap-type: x mandatory;
+       
+        div{
+            border-left: 0.1rem solid grey;
+        }
+       
+		div:hover{
+            line-height: 5rem;
+            background-color: lightgreen;
+        }
+            
+        &::-webkit-scrollbar{
+            display: none;
+        }
+	}
+    
+
+	.navigation-bar > div{
+		flex-shrink: 0;
+		width: 180px;
+		text-align: center;
+		scroll-snap-align: start;
+        font-size: 1.5rem;
+	}
+    
+    
+    
+    
+    
+.achievement_div{
+    width: 23%;
+}
+    
+    
+
+    
+    
+@media(max-width: 768px){
+    html{
+        font-size: 55%;
+    }
+    .achievement_div{
+        width: 45%;
+    }
+    
+}

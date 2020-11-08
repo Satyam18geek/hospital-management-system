@@ -1,0 +1,75 @@
+.im-scrollbar-and-news-container{
+        display: flex;
+        width: 100%;
+        height: 35rem;
+        justify-content: space-around;
+}
+       
+.main-scrollbar{
+    width: 68%;
+    border: 0.1rem solid lightgrey;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.main-scrollbar::-webkit-scrollbar{
+    height: 1rem;
+}
+
+.main-scrollbar::-webkit-scrollbar-thumb{
+    background-color: green;
+    border-radius: 0.5rem;
+}
+
+.main-scrollbar::-webkit-scrollbar-track{
+    background-color: lightgrey;
+    box-shadow: inset 0.1rem 0.1rem 0.5rem grey;
+    border-radius: 0.5rem;
+}
+.latest-News{
+    width: 28%;
+    border: 0.1rem solid lightgrey;
+    display: flex;
+    flex-flow: column;
+    overflow-y:scroll;
+}
+
+.latest-News::-webkit-scrollbar{
+    width: 0.7rem;
+}
+
+.latest-News::-webkit-scrollbar-thumb{
+    background-color: green;
+    border-radius: 0.5rem;
+}
+.latest-News::-webkit-scrollbar-track{
+    background-color: lightgrey;
+    box-shadow: inset 0.1rem 0.1rem 0.5rem grey;
+    border-radius: 0.5rem;
+}
+
+                
+.main-scrollbar > div{
+    width: 100%;
+    scroll-snap-align: center;
+    flex-shrink:0;
+}
+
+
+
+@media(max-width: 768px){
+    .im-scrollbar-and-news-container{
+        flex-flow: column;
+        height: 40%;
+        justify-content: center;
+        align-items: center;
+    }
+    .im-scrollbar-and-news-container > div{
+        width: 99%;
+    }
+    .latest-News{
+        height: 30rem;
+        margin: 1rem 0;
+    }
+}
